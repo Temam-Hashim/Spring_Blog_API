@@ -1,0 +1,15 @@
+Port 8080 in use
+==============
+1. netstat -ano | findstr *<port used>*
+       1.1 TCP    0.0.0.0:*<port used>*  0.0.0.0:0              LISTENING       *<pid>*
+2. taskkill /F /PID <pid>
+
+
+RUN DIFFRENT INSTANCE USING JAR FILE IN SPRING BOOT
+
+* go to maven director and click clean
+* after clean click install to generate jar in target folder
+* open up the terminal and navigate to target directory
+* write 'java -jar name.jar'
+* for different port
+  * java -jar name.jar --server.port=port
